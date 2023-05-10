@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Imperium;
+  src: url('./fonts/ImperiumSerif.ttf');
+}
+
+.title1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Imperium';
+  font-weight: bolder;
+}
+
+.box1 {
+  padding: 1rem;
+}
