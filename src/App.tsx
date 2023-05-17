@@ -1,19 +1,18 @@
-import { useState } from 'react';
 import './App.css';
-import { Button } from '@mui/material';
-import Wrapper from './components/Wrapper';
+import Wrapper from './components/app/Wrapper';
 import ProfilePage from './pages/ProfilePage';
+import { Route, Routes } from 'react-router-dom';
+import TmpPage from './pages/TmpPage';
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <Wrapper>
       <>
-        <ProfilePage />
-        <Button variant="contained" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
+        <Routes>
+          <Route path="/" element={<ProfilePage />} />
+          <Route path="/tmp" element={<TmpPage />} />
+        </Routes>
       </>
     </Wrapper>
   );
