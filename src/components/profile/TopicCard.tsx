@@ -12,7 +12,7 @@ function TopicCard(props: TopicCardProps) {
   return (
     <Link to={props.link}>
       <Card className="topic" shadow="md">
-        <div className="topic-title">{props.title}</div>
+        <div className="card-topic-title">{props.title}</div>
         <Divider my="sm" />
         {props.content}
       </Card>

@@ -1,5 +1,4 @@
-import TopicCard from '../components/app/TopicCard';
-import '../style/global.css';
+import TopicCard from '../components/profile/TopicCard';
 
 function TmpPage() {
   const title: string = "This is a placeholder";

@@ -4,11 +4,11 @@
   width: 28%;
   margin: 2%;
   display: inline-block;
-  background-color: #c7fae8;
+  background-color: var(--cyan1);
   text-align: justify;
 }
 
-.topic-title {
+.card-topic-title {
   font-weight: bold;
   text-align: center;
   font-size: large;

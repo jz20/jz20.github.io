@@ -1,3 +1,17 @@
+@font-face {
+  font-family: Imperium;
+  src: url('../style/fonts/ImperiumSerif.ttf');
+}
+
+.title1 {
+  font-size: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-family: 'Imperium';
+  font-weight: bolder;
+  text-align: center;
+}
+
 .card-box {
   text-align: center;
 }

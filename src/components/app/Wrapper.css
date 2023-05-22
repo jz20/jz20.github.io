@@ -6,7 +6,8 @@
 }
 
 .wrapper-inner {
-  /* background-color: aquamarine; */
   margin: 0;
-  padding: 2em;
+  padding: 0.5em;
+  padding-top: 0em;
+  padding-bottom: 1em;
 }

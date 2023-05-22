@@ -1,9 +1,8 @@
-import '../style/global.css';
 import './ProfilePage.css';
 import ReactMarkdown from 'react-markdown';
 import bioPath from '../assets/content/bio.md';
 import { useEffect, useState } from 'react';
-import TopicCard from '../components/app/TopicCard';
+import TopicCard from '../components/profile/TopicCard';
 
 function ProfilePage() {
 
@@ -15,17 +14,17 @@ function ProfilePage() {
     fetch(bioPath)
       .then(response => response.text())
       .then(text => setBio(text));
-    console.log(bio);
   })
 
   return (
     <>
-      <h1 className="title1">{title}</h1>
+      <div className="title1">{title}</div>
       <div className='box1'><ReactMarkdown>{bio}</ReactMarkdown></div>
       <br />
       <div className="card-box">
           <TopicCard title="Main Page" content="main page" link="/"/>
           <TopicCard title="Tmp Page" content="temporary placeholder" link="/tmp"/>
+          <TopicCard title="Content Page" content="content page" link="/content"/>
       </div>
     </>
   );

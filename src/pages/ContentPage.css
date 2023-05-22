@@ -1,0 +1,28 @@
+.top-bar {
+  position: sticky;
+  top: 0px;
+  padding-top: 1em;
+  background-color: white;
+
+  text-align: center;
+}
+
+.justified-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: inline-block;
+  min-width: 150px;
+  color: black;
+  background-color: var(--cyan1);
+}
+
+.topic-title {
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: xx-large;
+}
