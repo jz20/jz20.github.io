@@ -1,5 +1,6 @@
 .topic {
   padding: 1em;
+  min-width: 250px;
   width: 28%;
   margin: 2%;
   display: inline-block;

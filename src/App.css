@@ -2,6 +2,18 @@
   margin: 0 auto;
   padding: 0rem;
   text-align: justify;
+  width: 60vw;
+  min-width: 480px;
+}
+
+@media (max-width: 480px) {
+  #root {
+    margin: 0 auto;
+    padding: 0rem;
+    text-align: justify;
+    width: 100vw;
+    min-width: 200px;
+  }
 }
 
 .logo {
