@@ -1,0 +1,22 @@
+.top-bar {
+  position: sticky;
+  top: 0px;
+  padding-top: 1em;
+  background-color: white;
+
+  text-align: center;
+}
+
+.justified-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bar-button {
+  display: inline-block;
+  min-width: 150px;
+  color: black;
+  background-color: var(--cyan1);
+}

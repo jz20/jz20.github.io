@@ -1,5 +1,5 @@
 import { Button } from "@mantine/core";
-import "./TableOfContent.css"
+import "./TableOfContent.css";
 import { forwardRef } from "react";
 
 interface TableOfContentProps {

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "cpp",
+    "name": "C++",
+    "description": "The programming language",
+    "sections": [
+      {
+        "id": "intro",
+        "name": "Introduction"
+      }
+    ]
+  }
+]

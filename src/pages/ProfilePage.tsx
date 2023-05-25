@@ -1,8 +1,10 @@
 import './ProfilePage.css';
 import ReactMarkdown from 'react-markdown';
-import bioPath from '../assets/content/bio.md';
 import { useEffect, useState } from 'react';
 import TopicCard from '../components/profile/TopicCard';
+
+import bioPath from '../assets/content/bio.md';
+import topics from '../assets/content/topics.json';
 
 function ProfilePage() {
 
@@ -14,7 +16,7 @@ function ProfilePage() {
     fetch(bioPath)
       .then(response => response.text())
       .then(text => setBio(text));
-  })
+  });
 
   return (
     <>
@@ -22,9 +24,7 @@ function ProfilePage() {
       <div className='box1'><ReactMarkdown>{bio}</ReactMarkdown></div>
       <br />
       <div className="card-box">
-          <TopicCard title="Main Page" content="main page" link="/"/>
-          <TopicCard title="Tmp Page" content="temporary placeholder" link="/tmp"/>
-          <TopicCard title="Content Page" content="content page" link="/content"/>
+        {topics.map(topic => <TopicCard title={topic.name} content={topic.description} link={"/" + topic.id}/>)}
       </div>
     </>
   );
