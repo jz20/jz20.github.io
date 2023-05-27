@@ -3,8 +3,41 @@
   top: 0px;
   width: 25%;
   min-width: 250px;
-  min-height: 100vh;
-  background-color: var(--cyan1);
+  height: 100vh;
+  padding-top: 1em;
+
+  background-color: white;
+
+  border-style: solid;
+  border-width: 0px;
+  border-right-width: 0.5em;
+  border-color: var(--cyan5);
   
   visibility: hidden;
+
+  overflow: auto;
+}
+
+.section-list {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.toc-button {
+  display: inline-block;
+  min-width: 150px;
+  color: black;
+  background-color: var(--cyan5);
+}
+
+.toc-button:hover {
+  background-color: var(--cyan2);
+  border-color: var(--cyan5);
+}
+
+.toc-title {
+  padding-left: 0.5em;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
 }

@@ -3,8 +3,7 @@ import TableOfContent from "../components/content/TableOfContent";
 import { useRef, useState } from "react";
 import TopBar from "../components/content/TopBar";
 import ContentLoader from "../components/content/ContentLoader";
-
-import topics from '../assets/content/topics.json';
+import TopicsQuery from "../util/TopicsQuery";
 
 interface ContentPageProps {
   topicId: string
@@ -26,20 +25,27 @@ function ContentPage(props: ContentPageProps) {
     }
   }
 
-  const [sectionId, _setSectionId] = useState("intro");
+  function onTableOfContentSelection(sectionId: string) {
+    setSectionId(sectionId);
+    hideTableOfContent();
+  }
 
-  const currentTopic = topics.filter(topic => topic.id == props.topicId).at(0);
-  const topicName = currentTopic?.name;
-  const sections = currentTopic?.sections;
-  const sectionName = sections?.filter(section => section.id == sectionId).at(0)?.name;
+  const [sectionId, setSectionId] = useState("intro");
 
-  const contentId = `${props.topicId}_${sectionId}`;
+  const title = TopicsQuery().getTitle(props.topicId, sectionId);
 
   return (
     <>
-      <TopBar title={`${topicName}: ${sectionName}`} onTableOfContentClick={showTableOfContent} />
-      <TableOfContent onCloseClick={hideTableOfContent} ref={tableRef} />
-      <div className='box1'><ContentLoader id={contentId} /></div>
+      <TopBar title={title} onTableOfContentClick={showTableOfContent} />
+      <TableOfContent
+        topicId={props.topicId}
+        onSelectionClick={onTableOfContentSelection}
+        onCloseClick={hideTableOfContent}
+        ref={tableRef}
+      />
+      <div className='box1'>
+        <ContentLoader topicId={props.topicId} sectionId={sectionId} />
+      </div>
     </>
   );
 }

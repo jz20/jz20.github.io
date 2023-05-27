@@ -7,6 +7,10 @@
       {
         "id": "intro",
         "name": "Introduction"
+      },
+      {
+        "id": "tmp",
+        "name": "Temporary Page"
       }
     ]
   }

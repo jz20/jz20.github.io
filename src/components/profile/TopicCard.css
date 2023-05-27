@@ -4,8 +4,12 @@
   width: 28%;
   margin: 2%;
   display: inline-block;
-  background-color: var(--cyan1);
+  background-color: var(--cyan5);
   text-align: justify;
+}
+
+.topic:hover {
+  background-color: var(--cyan2);
 }
 
 .card-topic-title {

@@ -13,7 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  --cyan5: #22b8cf;
+  --cyan4: #3bc9db;
+  --cyan3: #66d9e8;
+  --cyan2: #99e9f2;
   --cyan1: #c5f6fa;
+  --indigo5: #5c7cfa;
+  --indigo1: #dbe4ff;
+  --red7: #f03e3e;
+  --gray8: #343a40;
+
 }
 
 a {

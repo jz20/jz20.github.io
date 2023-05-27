@@ -3,15 +3,17 @@ import { useEffect, useState } from 'react';
 import fetchContentMarkdown from '../../util/fetchContentMarkdown';
 
 interface ContentLoaderProps {
-  id: string
+  topicId: string,
+  sectionId: string
 }
 
 function ContentLoader(props: ContentLoaderProps) {
 
   const [content, setContent] = useState("");
+  const id = `${props.topicId}_${props.sectionId}`;
 
   useEffect(() => {
-    fetchContentMarkdown(props.id)
+    fetchContentMarkdown(id)
       .then(text => setContent(text));
   });
 
