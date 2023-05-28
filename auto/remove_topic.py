@@ -20,7 +20,7 @@ def remove_from_toc(toc_path, topic_id):
     data = json.load(file)
 
     if not any([t["id"] == topic_id for t in data]):
-        sys.exit("Error: topic_id already exists")
+        sys.exit("Error: topic_id doesn't exist")
 
     data = [t for t in data if t["id"] != topic_id]
 
