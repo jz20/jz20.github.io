@@ -25,3 +25,8 @@
   background-color: var(--cyan2);
   border-color: var(--cyan5);
 }
+
+.solid-divider {
+  border: #eeeeee;
+  border-top: 0.1em solid #bbbbbb;
+}

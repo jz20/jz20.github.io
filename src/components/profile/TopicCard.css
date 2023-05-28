@@ -4,6 +4,11 @@
   width: 28%;
   margin: 2%;
   display: inline-block;
+
+  box-shadow: 0.05em 0.05em #eeeeee;
+  border-radius: 0.3em;
+
+  color: black;
   background-color: var(--cyan5);
   text-align: justify;
 }
@@ -16,4 +21,9 @@
   font-weight: bold;
   text-align: center;
   font-size: large;
+}
+
+.card-divider {
+  border: #eeeeee;
+  border-top: 0.1em solid #bbbbbb;
 }

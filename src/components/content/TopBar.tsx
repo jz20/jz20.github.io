@@ -1,4 +1,3 @@
-import { Button, Divider } from "@mantine/core";
 import "./TopBar.css";
 import { Link } from "react-router-dom";
 
@@ -12,13 +11,13 @@ function TopBar(props: TopBarProps) {
   return (
     <div className="top-bar">
       <div className="justified-bar">
-        <Button className="bar-button" onClick={() => props.onTableOfContentClick()}>Table of Content</Button>
+        <button className="bar-button" onClick={() => props.onTableOfContentClick()}>Table of Content</button>
         <Link to="/">
-          <Button className="bar-button">Main Page</Button>
+          <button className="bar-button">Main Page</button>
         </Link>
       </div>
       <div className="topic-title">{props.title}</div>
-      <Divider my="sm" />
+      <hr className="solid-divider" />
     </div>
   );
 }

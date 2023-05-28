@@ -1,4 +1,3 @@
-import { Button } from "@mantine/core";
 import "./TableOfContent.css";
 import { forwardRef } from "react";
 import TopicsQuery from "../../util/TopicsQuery";
@@ -20,7 +19,7 @@ const TableOfContent = forwardRef(
     return (
       <>
         <div ref={ref} className="table-of-content">
-          <Button className="toc-button" onClick={() => props.onCloseClick()}>Close</Button>
+          <button className="toc-button" onClick={() => props.onCloseClick()}>Close</button>
           <div className="section-list">
             <div className="toc-title">
               {topicName}
