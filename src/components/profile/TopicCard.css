@@ -5,25 +5,21 @@
   margin: 2%;
   display: inline-block;
 
-  box-shadow: 0.05em 0.05em #eeeeee;
+  box-shadow: 0.05em 0.05em var(--shadow-general);
   border-radius: 0.3em;
 
-  color: black;
-  background-color: var(--cyan5);
+  color: var(--text-general);
+
+  background-color: var(--primary);
   text-align: justify;
 }
 
 .topic:hover {
-  background-color: var(--cyan2);
+  background-color: var(--alt-primary);
 }
 
 .card-topic-title {
   font-weight: bold;
   text-align: center;
   font-size: large;
-}
-
-.card-divider {
-  border: #eeeeee;
-  border-top: 0.1em solid #bbbbbb;
 }

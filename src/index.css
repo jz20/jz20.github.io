@@ -4,15 +4,10 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
+  --white: #ffffff;
+  --black: #000000;
+  --cyan8: #0c8599;
   --cyan5: #22b8cf;
   --cyan4: #3bc9db;
   --cyan3: #66d9e8;
@@ -22,7 +17,42 @@
   --indigo1: #dbe4ff;
   --red7: #f03e3e;
   --gray8: #343a40;
+  --gray7: #495057;
+  --gray6: #868e96;
+  --gray4: #ced4da;
+  --gray2: #e9ecef;
 
+  --text-general: var(--black);
+  --background-general: var(--white);
+  --primary: var(--cyan5);
+  --alt-primary: var(--cyan2);
+  --shadow-general: var(--gray2);
+  --neutral: var(--gray4);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-general: var(--white);
+    --background-general: var(--gray8);
+    --primary: var(--cyan8);
+    --alt-primary: var(--cyan5);
+    --shadow-general: var(--gray8);
+    --neutral: var(--gray4);
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+:root {
+  color: var(--text-general);
+  background-color: var(--background-general);
 }
 
 a {
@@ -60,27 +90,18 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  color: var(--text-general);
+  background-color: var(--primary);
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: var(--alt-primary);
+  border-color: var(--primary);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+hr {
+  border: var(--shadow-general);
+  border-top: 0.1em solid var(--neutral);
 }
