@@ -24,7 +24,7 @@ function ProfilePage() {
       <div className='box1'><ReactMarkdown>{bio}</ReactMarkdown></div>
       <br />
       <div className="card-box">
-        {topics.map(topic => <TopicCard title={topic.name} content={topic.description} link={"/" + topic.id}/>)}
+        {topics.map(topic => <TopicCard title={topic.name} content={topic.description} link={`/${topic.id}/intro`}/>)}
       </div>
     </>
   );

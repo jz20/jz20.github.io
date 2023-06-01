@@ -5,7 +5,6 @@ import SectionSelector from "./SectionSelector";
 
 interface TableOfContentProps {
   topicId: string,
-  onSelectionClick: (sectionId: string) => void
   onCloseClick: () => void
 }
 
@@ -26,8 +25,11 @@ const TableOfContent = forwardRef(
             </div>
             {sections?.map(section => (
               <SectionSelector
-                text={section.name}
-                onClick={() => props.onSelectionClick(section.id)} />
+                topicId={props.topicId}
+                sectionId={section.id}
+                sectionName={section.name}
+                onClick={props.onCloseClick}
+              />
             ))}
           </div>
         </div>

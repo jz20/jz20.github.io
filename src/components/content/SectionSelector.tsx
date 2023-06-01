@@ -1,16 +1,21 @@
+import { Link } from "react-router-dom";
 import "./SectionSelector.css";
 
 interface SectionSelectorProps {
-  text: string,
+  topicId: string,
+  sectionId: string,
+  sectionName: string,
   onClick: () => void
 }
 
 function SectionSelector(props: SectionSelectorProps) {
   return (
     <div className="section-selector-outer">
-      <div className="section-selector-inner" onClick={props.onClick}>
-        {props.text}
-      </div>
+      <Link to={`/${props.topicId}/${props.sectionId}`}>
+        <div className="section-selector-inner" onClick={props.onClick}>
+          {props.sectionName}
+        </div>
+      </Link>
     </div>
   );
 }

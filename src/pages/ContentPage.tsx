@@ -1,12 +1,13 @@
 import "./ContentPage.css";
 import TableOfContent from "../components/content/TableOfContent";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import TopBar from "../components/content/TopBar";
 import ContentLoader from "../components/content/ContentLoader";
 import TopicsQuery from "../util/TopicsQuery";
 
 interface ContentPageProps {
   topicId: string
+  sectionId?: string
 }
 
 function ContentPage(props: ContentPageProps) {
@@ -25,12 +26,9 @@ function ContentPage(props: ContentPageProps) {
     }
   }
 
-  function onTableOfContentSelection(sectionId: string) {
-    setSectionId(sectionId);
-    hideTableOfContent();
-  }
+  const defaultSectionId = "intro";
 
-  const [sectionId, setSectionId] = useState("intro");
+  const sectionId = props.sectionId ? props.sectionId : defaultSectionId;
 
   const title = TopicsQuery().getTitle(props.topicId, sectionId);
 
@@ -39,7 +37,6 @@ function ContentPage(props: ContentPageProps) {
       <TopBar title={title} onTableOfContentClick={showTableOfContent} />
       <TableOfContent
         topicId={props.topicId}
-        onSelectionClick={onTableOfContentSelection}
         onCloseClick={hideTableOfContent}
         ref={tableRef}
       />

@@ -8,8 +8,6 @@
   box-shadow: 0.05em 0.05em var(--shadow-general);
   border-radius: 0.3em;
 
-  color: var(--text-general);
-
   background-color: var(--primary);
   text-align: justify;
 }
@@ -21,5 +19,5 @@
 .card-topic-title {
   font-weight: bold;
   text-align: center;
-  font-size: large;
+  font-size: larger;
 }

@@ -13,9 +13,16 @@ function App() {
       <>
         <Routes>
           <Route path="/" element={<ProfilePage />} />
-          {topics.map(topic => <Route path={"/" + topic.id} element={
-            <ContentPage topicId={topic.id}/>
-          }/>)}
+          {topics.map(topic =>
+            <Route path={`/${topic.id}`} element={
+              <ContentPage topicId={topic.id} />
+            }/>
+          )}
+          {topics.map(topic => topic.sections.map(section => 
+            <Route path={`/${topic.id}/${section.id}`} element={
+              <ContentPage topicId={topic.id} sectionId={section.id} />
+            }/>
+          ))}
         </Routes>
       </>
     </Wrapper>
