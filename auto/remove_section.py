@@ -5,8 +5,8 @@ import fileinput
 
 def get_sys_arguments():
     
-    if len(sys.argv) != 4:
-        sys.exit("Error: add_topic requires 2 arguments - topic_id, section_id")
+    if len(sys.argv) != 3:
+        sys.exit("Error: remove_section requires 2 arguments - topic_id, section_id")
     
     topic_id = sys.argv[1]
     section_id = sys.argv[2]
@@ -23,7 +23,7 @@ def remove_from_toc(toc_path, topic_id, section_id):
         sys.exit("Error: topic_id doesn't exist")
 
     def remove_section_from(topic):
-        if not any([s["id"] == section_id for s in topic]):
+        if not any([s["id"] == section_id for s in topic["sections"]]):
             sys.exit("Error: section_id doesn't exist in this topic")
         topic["sections"] = [s for s in topic["sections"] if s["id"] != section_id]
         return topic
@@ -52,7 +52,7 @@ def remove_reference(fetcher_path, topic_id, section_id):
 
 def remove_section():
     
-    topic_id, section_id, section_name = get_sys_arguments()
+    topic_id, section_id = get_sys_arguments()
     
     content_path = f"{os.getcwd()}/src/assets/content/"
     toc_path = content_path + "topics.json"

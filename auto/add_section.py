@@ -6,7 +6,7 @@ import fileinput
 def get_sys_arguments():
     
     if len(sys.argv) != 4:
-        sys.exit("Error: add_topic requires 3 arguments - topic_id, section_id, section_name")
+        sys.exit("Error: add_section requires 3 arguments - topic_id, section_id, section_name")
     
     topic_id = sys.argv[1]
     section_id = sys.argv[2]
@@ -15,10 +15,10 @@ def get_sys_arguments():
     try:
         section_id.encode("ascii")
     except UnicodeEncodeError:
-        sys.exit("Error: topic_id needs to be ascii letters")
+        sys.exit("Error: section_id needs to be ascii letters")
 
     if not all([char.islower() for char in section_id]):
-        sys.exit("Error: topic_id needs to be all lowercase letters")
+        sys.exit("Error: section_id needs to be all lowercase letters")
     
     return topic_id, section_id, section_name
 
@@ -32,9 +32,9 @@ def add_to_toc(toc_path, topic_id, section_id, section_name):
         sys.exit("Error: topic_id doesn't exist")
 
     def append_section_to(topic):
-        if any([s["id"] == section_id for s in topic]):
+        if any([s["id"] == section_id for s in topic["sections"]]):
             sys.exit("Error: section_id already exists in this topic")
-        topic.append(
+        topic["sections"].append(
             {
                 "id": section_id,
                 "name": section_name

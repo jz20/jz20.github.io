@@ -6,6 +6,8 @@ import ContentPage from './pages/ContentPage';
 
 import topics from './assets/content/topics.json';
 
+export const defaultSectionId = "intro";
+
 function App() {
 
   return (

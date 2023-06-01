@@ -5,6 +5,8 @@ import TopBar from "../components/content/TopBar";
 import ContentLoader from "../components/content/ContentLoader";
 import TopicsQuery from "../util/TopicsQuery";
 
+import { defaultSectionId } from '../App';
+
 interface ContentPageProps {
   topicId: string
   sectionId?: string
@@ -25,8 +27,6 @@ function ContentPage(props: ContentPageProps) {
       tableRef.current.style.visibility = "hidden";
     }
   }
-
-  const defaultSectionId = "intro";
 
   const sectionId = props.sectionId ? props.sectionId : defaultSectionId;
 

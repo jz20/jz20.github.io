@@ -6,6 +6,8 @@ import TopicCard from '../components/profile/TopicCard';
 import bioPath from '../assets/content/bio.md';
 import topics from '../assets/content/topics.json';
 
+import { defaultSectionId } from '../App';
+
 function ProfilePage() {
 
   const title: string = "Welcome to Jian's Personal Site";
@@ -24,7 +26,7 @@ function ProfilePage() {
       <div className='box1'><ReactMarkdown>{bio}</ReactMarkdown></div>
       <br />
       <div className="card-box">
-        {topics.map(topic => <TopicCard title={topic.name} content={topic.description} link={`/${topic.id}/intro`}/>)}
+        {topics.map(topic => <TopicCard title={topic.name} content={topic.description} link={`/${topic.id}/${defaultSectionId}`}/>)}
       </div>
     </>
   );
