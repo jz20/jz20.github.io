@@ -13,6 +13,7 @@
   --cyan3: #66d9e8;
   --cyan2: #99e9f2;
   --cyan1: #c5f6fa;
+  --indigo9: #364fc7;
   --indigo5: #5c7cfa;
   --indigo1: #dbe4ff;
   --red7: #f03e3e;
@@ -27,6 +28,7 @@
   --primary: var(--cyan5);
   --alt-primary: var(--cyan2);
   --shadow-general: var(--gray2);
+  --link-general: var(--indigo9);
   --neutral: var(--gray4);
 
   font-synthesis: none;
@@ -43,10 +45,8 @@
     --primary: var(--cyan8);
     --alt-primary: var(--cyan5);
     --shadow-general: var(--gray8);
+    --link-general: var(--indigo1);
     --neutral: var(--gray4);
-  }
-  a:hover {
-    color: #747bff;
   }
 }
 
@@ -56,8 +56,13 @@
 }
 
 a {
-  color: var(--text-general);
-  text-decoration: inherit;
+  color: var(--link-general);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--link-general);
+  text-decoration: underline;
 }
 
 html, body {

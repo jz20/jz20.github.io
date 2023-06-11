@@ -12,9 +12,18 @@
   border-width: 0px;
   border-bottom-width: 0.1em;
   border-color: var(--primary);
-  
 }
 
 .section-selector-inner:hover {
   background-color: var(--alt-primary);
+}
+
+.section-selector-outer a:link {
+  color: var(--text-general);
+  text-decoration: none;
+}
+
+.section-selector-outer a:visited {
+  color: var(--text-general);
+  text-decoration: none;
 }

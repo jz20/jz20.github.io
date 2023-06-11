@@ -1,23 +1,39 @@
-.topic {
+.topic-outer {
   padding: 1em;
   min-width: 250px;
   width: 28%;
   margin: 2%;
   display: inline-block;
+  vertical-align: top;
 
   box-shadow: 0.05em 0.05em var(--shadow-general);
-  border-radius: 0.3em;
 
-  background-color: var(--primary);
+  color: var(--text-general);
+
   text-align: justify;
 }
 
-.topic:hover {
-  background-color: var(--alt-primary);
+.topic-inner {
+  height: 10em;
 }
 
 .card-topic-title {
+  max-width: 100%;
   font-weight: bold;
   text-align: center;
   font-size: larger;
+}
+
+.card-topic-content {
+  font-weight: normal;
+}
+
+.topic-outer a:link {
+  color: var(--text-general);
+  text-decoration: none;
+}
+
+.topic-outer a:visited {
+  color: var(--text-general);
+  text-decoration: none;
 }
