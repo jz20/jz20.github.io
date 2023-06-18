@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 import fetchContentMarkdown from '../../util/fetchContentMarkdown';
+import "./ContentLoader.css";
 
 interface ContentLoaderProps {
   topicId: string,
@@ -17,8 +18,17 @@ function ContentLoader(props: ContentLoaderProps) {
       .then(text => setContent(text));
   });
 
+  const components = {
+    img: (
+      {alt, src, title}: {alt?: string, src?: string, title?:string}
+    ) => 
+      <div className="markdown-img-wrapper">
+        <img alt={alt} src={src} title={title} className="markdown-img"/>
+      </div>
+  }
+
   return (
-    <ReactMarkdown>{content}</ReactMarkdown>
+    <ReactMarkdown components={components}>{content}</ReactMarkdown>
   );
 }
 
