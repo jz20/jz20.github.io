@@ -22,4 +22,4 @@
 
 &emsp;&emsp;Following this part of the tutorial, I created the following with what I learned so far:
 
-![Stairs and Plinth](../../../../public/unity/stairs_and_plinth.png)
+![Stairs and Plinth](/unity/stairs_and_plinth.png)
