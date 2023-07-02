@@ -18,8 +18,16 @@
 
 &emsp;&emsp;I was introduced to the Inspector window for the GameObject properties in this section, even though I was already using it earlier because I liked positioning objects using numerical calues better than just dragging them. One strategy I used was dragging objects to the approximate place I want them, and then align them properly using numerical values. 
 
-&emsp;&emsp;A cool thing I learned in this section was that when an object has a child object, the position of the child object is set relative to the parent object, so it will always transform with the parent component in a predicatable way.
+&emsp;&emsp;A cool thing I learned in this section was that when an object has a child object, the position of the child object is set relative to the parent object, so it will always transform with the parent component in a predicatable way. I can also always find out the global positioning of objects by removing the parent-child dependency.
 
-&emsp;&emsp;Following this part of the tutorial, I created the following with what I learned so far:
+&emsp;&emsp;Following the part of the tutorial on the basic structure, I created the following with what I learned so far:
 
 ![Stairs and Plinth](/unity/stairs_and_plinth.png)
+
+&emsp;&emsp;Once the structure was completed, it was time to add some objects with components, which give the objects specific types of behaviour. I first found out that the tranformation operations I was doing to the object was also just a component. I created a ball with the RigidBody component, and I was able to observe it falling and rolling as affected by gravity. Most of what I observed was expected, but I was a bit surprised that its collision with my spherical dome was a bit weird: it would start moving away from the other sphere before they actually touched. I tested it with a new individual sphere and it did behave as expected, so I thought it must have been some setting that I accidentally changed. I replaced the dome with the new sphere.
+
+&emsp;&emsp;Then, I learned to use materials to change the look and behaviour of objects, e.g. making objects bouncy. I added a few objects to my scene to get the following:
+
+![Falling Objects](/unity/falling_objects.png)
+
+&emsp;&emsp;The next tool in the tutorial was prefabs. They are entities that act as object templates, which seem very useful if you want to create multiple intances or slight variations of the same object. In each instance properties can be overriden, which reminded me of inheritance and polymorphism in Object Oriented Programming (OOP). GameObjects are objects after all. Then, I learned about prefab variants, which are more closely related to OOP. If prefabs are parent classes, then prefab variants are child classes, and individual objects are instances.
