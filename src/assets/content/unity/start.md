@@ -31,3 +31,9 @@
 ![Falling Objects](/unity/falling_objects.png)
 
 &emsp;&emsp;The next tool in the tutorial was prefabs. They are entities that act as object templates, which seem very useful if you want to create multiple intances or slight variations of the same object. In each instance properties can be overriden, which reminded me of inheritance and polymorphism in Object Oriented Programming (OOP). GameObjects are objects after all. Then, I learned about prefab variants, which are more closely related to OOP. If prefabs are parent classes, then prefab variants are child classes, and individual objects are instances.
+
+### Programming in Unity - C#
+
+&emsp;&emsp;The tutorial on the programming part in Unity was based on Visual Studio, which I unfortunately couldn't get on Linux, so I used VS Code instead.
+
+&emsp;&emsp;The default structure of a script contains a `Start()` funtion, which is run at the beginning of the game, and an `Update()` function, which is run every frame. I tried logging some messages in the debug console. 
