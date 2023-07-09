@@ -36,4 +36,4 @@
 
 &emsp;&emsp;The tutorial on the programming part in Unity was based on Visual Studio, which I unfortunately couldn't get on Linux, so I used VS Code instead.
 
-&emsp;&emsp;The default structure of a script contains a `Start()` funtion, which is run at the beginning of the game, and an `Update()` function, which is run every frame. I tried logging some messages in the debug console. 
+&emsp;&emsp;The default structure of a script contains a `Start()` funtion, which is run at the beginning of the game, and an `Update()` function, which is run every frame. I tried logging some messages in the debug console. Inside these functions, I'm also able to make changes to the objects, such as position, rotation, and scale. The script and the Unity Editor are well integrated, in that the editor has access to variables in the script.
